@@ -1,11 +1,22 @@
 <?php
 session_start(); // Khởi tạo session để lưu trạng thái đăng nhập
+require_once 'google-config.php';
 
 /* ============================================================
    PHẦN XỬ LÝ PHP (BACKEND)
    ============================================================ */
 $msg = "";
 $msg_type = ""; // success | error
+
+// Tạo URL đăng nhập Google
+$google_login_url = 'https://accounts.google.com/o/oauth2/v2/auth?' . http_build_query([
+    'client_id' => GOOGLE_CLIENT_ID,
+    'redirect_uri' => GOOGLE_REDIRECT_URI,
+    'response_type' => 'code',
+    'scope' => GOOGLE_SCOPE,
+    'access_type' => 'offline',
+    'prompt' => 'select_account'
+]);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = trim($_POST['username']);
@@ -177,7 +188,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <label>
                     <input type="checkbox" name="remember"> Ghi nhớ đăng nhập
                 </label>
-                <a href="#">Quên mật khẩu?</a>
+                <a href="forgot-password.php">Quên mật khẩu?</a>
             </div>
 
             <button type="submit" class="btn-submit">Đăng Nhập</button>
@@ -185,7 +196,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <div class="divider"><span>HOẶC</span></div>
 
-        <a href="https://accounts.google.com/" target="_blank" class="btn-google">
+        <a href="<?php echo htmlspecialchars($google_login_url); ?>" class="btn-google">
             <i class="fab fa-google" style="color: var(--google-red);"></i> Đăng nhập bằng Google
         </a>
 

@@ -171,13 +171,13 @@ $product_tabs = ['Tất cả', 'Quà tặng', 'Phổ biến', 'Đề xuất', 'S
                         <strong>Nhà thuốc</strong>
                     </div>
                 </div>
-                <div class="action-item">
+                <a href="login.php" class="action-item" style="text-decoration: none; color: inherit;">
                     <i class="fas fa-user"></i>
                     <div>
                         <small>Tài khoản</small>
                         <strong>Đăng nhập/Đăng ký</strong>
                     </div>
-                </div>
+                </a>
                 <div class="action-item">
                     <i class="fas fa-file-alt"></i>
                     <div>
