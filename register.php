@@ -116,6 +116,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="https://accounts.google.com/signup" target="_blank" class="btn-google">
             <i class="fab fa-google" style="color: #DB4437;"></i> Đăng ký bằng Google
         </a>
+
+        <div style="text-align: center; margin-top: 20px; color: #666;">
+            Đã có tài khoản? <a href="login.php" style="color: var(--color-primary); font-weight: bold; text-decoration: none;">Đăng nhập</a>
+        </div>
     </div>
 
     <script>
