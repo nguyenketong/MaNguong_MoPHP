@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Đăng Ký - Long Hoàn</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* CSS GIỮ NGUYÊN, CHỈ THÊM NÚT BACK */
+
         :root {
             --color-primary: #1e5631; --color-hover: #143d22;
             --color-bg: #f4f6f8; --border-radius-pill: 50px;
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative;
         }
 
-        /* --- THÊM STYLE CHO NÚT QUAY LẠI --- */
+ 
         .btn-back {
             display: inline-flex; align-items: center; gap: 5px;
             text-decoration: none; color: #777; font-size: 14px; font-weight: 600;
@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
         .btn-back:hover { color: var(--color-primary); transform: translateX(-5px); }
 
-        /* Các style cũ giữ nguyên */
+  
         .card-header { text-align: center; margin-bottom: 20px; }
         .card-header h2 { color: var(--color-primary); text-transform: uppercase; }
         .avatar-wrapper { text-align: center; margin-bottom: 20px; }
@@ -80,7 +80,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <div class="register-card">
         
-        <!-- NÚT QUAY LẠI INDEX.PHP -->
+
         <a href="index.php" class="btn-back">
             <i class="fa fa-arrow-left"></i> Quay lại trang chủ
         </a>
